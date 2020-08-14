@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  UI enhancements for Senpri
 // @author       Meidodev
-// @match        http://app.senpri.com/*
+// @match        https://app.senpri.com/*
 // @grant        none
 // ==/UserScript==
 
