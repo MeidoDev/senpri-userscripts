@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Senpri Rantou
 // @namespace    meidodev.senpri.rantou
-// @version      1.0
+// @version      1.1
 // @description  Dairantou Helper
 // @author       Meidodev
 // @match        https://app.senpri.com/*
@@ -34,6 +34,14 @@ window.SenpriRantou = (function() {
 
                             case 'm':
                                 bColor = 'turquoise';
+                                break;
+
+                            case 'm1':
+                                bColor = 'seagreen';
+                                break;
+
+                            case 'm2':
+                                bColor = 'fuchsia';
                                 break;
 
                             case 'l':
@@ -74,7 +82,7 @@ window.SenpriRantou = (function() {
 
             let resultTotal = resultAtk ? 'w' : 'l';
             if (resultAtk != resultDef) {
-                resultTotal = 'm';
+                resultTotal = resultAtk ? 'm1' : 'm2';
             }
 
             //console.log(`Result for rival ${rID}: ${resultTotal}`);
