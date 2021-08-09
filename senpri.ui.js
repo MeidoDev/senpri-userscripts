@@ -26,7 +26,7 @@ window.SenpriUI = (function() {
         $('.mypageAdminInfoArea__detailTextArea').children().css('user-select', 'text');
     },
     moveRaidListRefreshButton = function() {
-        $('a.eventRaidBossList__refreshBtn').insertAfter('div.eventRaidBossList__finder--self');
+        $('a.eventRaidBossList__refreshBtn').clone().insertAfter('div.eventRaidBossList__finder--self');
     };
 
     return {
@@ -40,7 +40,7 @@ window.SenpriUI = (function() {
 
             // URL-specific stuff
             const curURL = new URL(window.location);
-            
+
             if (curURL.searchParams.get('c') === 'EventRaid' && curURL.searchParams.get('f') === 'bossList') {
                 moveRaidListRefreshButton();
             }
